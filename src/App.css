@@ -1,0 +1,67 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+section {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+  margin-bottom: 5rem;
+  scroll-margin-top: var(--header-height, 80px);
+}
+
+#hero {
+  padding-top: var(--header-height, 80px);
+  margin-top: calc(-1 * var(--header-height, 80px));
+  scroll-margin-top: var(--header-height, 80px);
+}
+#about {
+  scroll-margin-top: var(--header-height, 80px);
+}
+#projects {
+  scroll-margin-top: var(--header-height, 80px);
+}
+#contact {
+  scroll-margin-top: var(--header-height, 80px);
+}
+
+section:last-of-type {
+  margin-bottom: 0;
+}
+
+section.pre-animate {
+  /* Marker for JS-driven animation */
+}
+
+section.animate {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  section.pre-animate:not(.animate) {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 2rem 0.5rem;
+  }
+  section {
+    padding: 2rem 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1.5rem 0;
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 1rem 0;
+}

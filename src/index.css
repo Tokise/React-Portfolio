@@ -1,0 +1,53 @@
+:root {
+  /* Light mode */
+  --background: #FFFFFF;
+  --surface: #F3F3F9;
+  --primary-text: #1E1E2F;
+  --secondary-text: #6C6C80;
+  --accent: #6D28D9;
+  --accent-hover: #7C3AED;
+  --border: #E5E7EB;
+  --header-height: 80px;
+}
+
+:root[data-theme="dark"] {
+  --background: #0E0B1F;
+  --surface: #19152E;
+  --primary-text: #FFFFFF;
+  --secondary-text: #C4C4C4;
+  --accent: #A560F2;
+  --accent-hover: #C084FC;
+  --border: #2A263D;
+  --header-height: 80px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: var(--primary-text);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  transition: background 0.3s, color 0.3s;
+  position: relative;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.08;
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="white" fill-opacity="0"/><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100" height="100" filter="url(%23noise)"/></svg>');
+  background-size: 200px 200px;
+  animation: noise-move 6s linear infinite alternate;
+}
+@keyframes noise-move {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
