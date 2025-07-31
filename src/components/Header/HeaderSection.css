@@ -58,7 +58,7 @@
     left: 0;
     right: 0;
     background: var(--surface);
-    padding: 1rem 2rem;
+    padding: 1rem;
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     z-index: 150;
     width: 100vw;
