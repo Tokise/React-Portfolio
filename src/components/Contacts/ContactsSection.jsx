@@ -12,7 +12,7 @@ const contacts = [
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/johnrey-ablen-1452ba361/",
     icon: "💼",
-    label: "Johnrey Ablen"
+    label: "LinkedIn"
   },
    {
     name: "Facebook",
